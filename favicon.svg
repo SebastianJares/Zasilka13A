@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <radialGradient id="g" cx="35%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#ff2a2a" stop-opacity=".35"/>
+      <stop offset="55%" stop-color="#8f00ff" stop-opacity=".18"/>
+      <stop offset="100%" stop-color="#06060a" stop-opacity="1"/>
+    </radialGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000" flood-opacity=".8"/>
+    </filter>
+  </defs>
+
+  <rect x="10" y="10" width="108" height="108" rx="26" fill="url(#g)" stroke="rgba(255,255,255,.18)"/>
+  <path d="M40 84V44l24-12 24 12v40l-24 12-24-12Z"
+        fill="none" stroke="rgba(255,255,255,.86)" stroke-width="6" filter="url(#s)"/>
+  <path d="M64 44v44" stroke="rgba(255,42,42,.55)" stroke-width="4"/>
+</svg>
