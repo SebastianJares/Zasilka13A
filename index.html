@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Zásilka 13A</title>
+  <meta name="theme-color" content="#07070a" />
+
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div class="bg" aria-hidden="true">
+    <video id="bgVideo" autoplay muted loop playsinline preload="auto">
+      <source src="assets/bg.mp4" type="video/mp4" />
+      <source src="assets/bg.webm" type="video/webm" />
+    </video>
+  </div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <header>
+      <div class="title" data-text="Zásilka 13A">Zásilka 13A</div>
+    </header>
+
+    <main>
+      <section class="dock" aria-label="Navigace">
+        <div class="dock-inner">
+
+          <button class="icon-btn" data-key="scenario" type="button" aria-label="Scénář">
+            <div class="icon-content">
+              <div class="ic-row">
+                <div class="glyph" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M6 4h9a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2V6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.8" opacity=".95"/>
+                    <path d="M8 8h7M8 11h6M8 14h5" stroke="currentColor" stroke-width="1.8" opacity=".9" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div class="label">Scénář</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="icon-btn" data-key="materials" type="button" aria-label="Materiály">
+            <div class="icon-content">
+              <div class="ic-row">
+                <div class="glyph" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M7 7h10l1 3v9a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V10l1-3Z" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" stroke="currentColor" stroke-width="1.8" opacity=".92"/>
+                    <path d="M7 10h12" stroke="currentColor" stroke-width="1.8" opacity=".92"/>
+                  </svg>
+                </div>
+                <div class="label">Materiály</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="icon-btn" data-key="activities" type="button" aria-label="Aktivity">
+            <div class="icon-content">
+              <div class="ic-row">
+                <div class="glyph" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M4 4h16v16H4V4Z" stroke="currentColor" stroke-width="1.8" opacity=".95"/>
+                    <path d="M8 4v6h6V4M10 10v6h6v-4" stroke="currentColor" stroke-width="1.8" opacity=".92" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 20v-4h2" stroke="currentColor" stroke-width="1.8" opacity=".92" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div class="label">Aktivity</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="icon-btn" data-key="board" type="button" aria-label="Hrací plocha">
+            <div class="icon-content">
+              <div class="ic-row">
+                <div class="glyph" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M9 18 3 20V6l6-2 6 2 6-2v14l-6 2-6-2Z" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M9 4v14M15 6v14" stroke="currentColor" stroke-width="1.8" opacity=".92"/>
+                  </svg>
+                </div>
+                <div class="label">Hrací plocha</div>
+              </div>
+            </div>
+          </button>
+
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <section class="panel" id="panel" aria-hidden="true">
+    <div class="panel-backdrop" id="backdrop"></div>
+
+    <div class="panel-card" role="dialog" aria-modal="true" aria-labelledby="panelH">
+      <div class="panel-top">
+        <div class="panel-left">
+          <button class="back hidden" id="backBtn" type="button" aria-label="Zpět">← Zpět</button>
+          <h2 class="panel-h" id="panelH">—</h2>
+        </div>
+
+        <button class="close" id="closeBtn" type="button">Zavřít ✕</button>
+      </div>
+
+      <div class="panel-body" id="panelBody"></div>
+    </div>
+  </section>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
